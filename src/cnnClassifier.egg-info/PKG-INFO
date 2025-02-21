@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/RymTangour/Kideny_Disease_Classification_MLflow.DVC
+Author: RymTangour
+Author-email: tangourrim@gmail.com
+Project-URL: Bug Tracker, https:github.com/RymTangour/Kideny_Disease_Classification_MLflow.DVC/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# Kideny_Disease_Classification

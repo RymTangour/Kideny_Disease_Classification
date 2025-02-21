@@ -3,7 +3,7 @@ pandas
 dvc
 mlflow==2.2.2
 numpy 
-notebook  #or use #conda install jupyter
+#notebook  #or use #conda install jupyter
 matplotlib
 seaborn
 python-box==6.0.2
@@ -16,4 +16,5 @@ scipy
 Flask
 Flask-Cors
 gdown
+python-box
 -e .
