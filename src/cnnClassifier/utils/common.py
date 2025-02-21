@@ -1,14 +1,15 @@
 import os
-from box.exception import BoxValueError
+from box.exceptions import BoxValueError  
 import yaml
 from cnnClassifier import logger
 import json
 import joblib
 from ensure import ensure_annotations
-from box import configBox
+from box import ConfigBox  
 from pathlib import Path
 from typing import Any
 import base64
+
 
 
 @ensure_annotations
@@ -27,7 +28,7 @@ def read_yaml(path_to_yaml:Path)-> ConfigBox:
     try:
         with open(path_to_yaml)as yaml_file:
             content=yaml.safe_load(yaml_file)
-            logger.info(f"yaml file :{path_tp_yaml} loaded succfully")
+            logger.info(f"yaml file :{path_to_yaml} loaded succfully")
             return ConfigBox(content)
     except BoxValueError:
         raise ValueError("yaml file is empty")
@@ -86,20 +87,20 @@ def save_bin(data:Any, path:Path):
     joblib.dump(value=data, filename=path)
     logger.info(f"binary file saved at :{path}")
 
+
 @ensure_annotations
-def load_bin(path:Path)->Any:
-    
-  """load binary data
+def load_bin(path: Path) -> Any:
+    """Load binary data
 
     Args:
-        path (Path): path to binary file
+        path (Path): Path to binary file
 
     Returns:
-        Any: object stored in the file
+        Any: Object stored in the file
     """
 
     data = joblib.load(path)
-    logger.info(f"binary file loaded from: {path}")
+    logger.info(f"Binary file loaded from: {path}")
     return data
 
 @ensure_annotations
@@ -124,7 +125,8 @@ def decodeImage(imgstring,fileName):
 
 def encodeImageIntoBase64(croppedImagePath):
     with open(croppedImagePath,"rb") as f:
-        return base64.basencode(f.read())
+        return base64.b64encode(f.read())  
+
 
         
 
