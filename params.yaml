@@ -1,1 +1,32 @@
-key: val
+AUGMENTATION: True
+IMAGE_SIZE: [224, 224, 3] #VGG16 model recommandation
+BATCH_SIZE: 16
+INCLUDE_TOP: False
+EPOCHS: 1
+CLASSES: 2
+WEIGHTS: imagenet
+LEARNING_RATE: 0.01
+
+# AUGMENTATION: True
+# This indicates that data augmentation is enabled. Data augmentation is a technique used to artificially increase the diversity of the training dataset by applying transformations like rotation, flipping, cropping, etc. This helps improve the model's generalization and performance.
+
+# IMAGE_SIZE: [224, 224, 3]
+# This specifies the size of the input images for the model. The images will be resized to 224x224 pixels with 3 color channels (RGB). This is the recommended input size for the VGG16 model.
+
+# BATCH_SIZE: 16
+# The batch size determines how many images are processed at once during training. A batch size of 16 means the model will process 16 images in each forward/backward pass.
+
+# INCLUDE_TOP: False
+# This indicates that the top layers (fully connected layers) of the pre-trained VGG16 model are excluded. This is common when using transfer learning, where you replace the top layers with your own custom layers for a specific task (e.g., binary classification).
+
+# EPOCHS: 1
+# The number of epochs defines how many times the model will iterate over the entire training dataset. Here, it is set to 1, meaning the model will train for one full pass through the data.
+
+# CLASSES: 2
+# This specifies the number of output classes for the classification task. A value of 2 indicates a binary classification problem (e.g., classifying images into two categories).
+
+# WEIGHTS: imagenet
+# This indicates that the model will use pre-trained weights from the ImageNet dataset. Using pre-trained weights allows the model to leverage learned features, which is especially useful when training on a small dataset.
+
+# LEARNING_RATE: 0.01s
+# The learning rate controls how much the model's weights are updated during training. A learning rate of 0.01 is specified here. The "s" at the end might be a typo or could indicate a scheduler for adjusting the learning rate during training.
