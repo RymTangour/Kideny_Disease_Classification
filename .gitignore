@@ -139,6 +139,12 @@ ENV/
 env.bak/
 venv.bak/
 my_nzw_kideny/
+myenv/
+mlruns/
+anaconda_projects/
+condasrc/cnnClassifier.egg-info/
+.github/
+archive.zip
 
 # Spyder project settings
 .spyderproject
@@ -173,3 +179,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+myenv/

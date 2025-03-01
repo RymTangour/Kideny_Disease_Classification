@@ -6,13 +6,22 @@ import time
 from cnnClassifier.entity.config_entity import TrainingConfig
 from pathlib import Path
 
+tf.config.run_functions_eagerly(True)
 
 class Training:
     def __init__(self,config: TrainingConfig):
         self.config=config
+
+        
     def get_base_model(self):
         self.model=tf.keras.models.load_model(
-            self.config.updated_base_model_path
+            self.config.updated_base_model_path , compile=True
+        )
+
+        self.model.compile(
+            optimizer='adam',  # Use your desired optimizer
+            loss='categorical_crossentropy',  # Use your desired loss function
+            metrics=['accuracy']  # Use your desired metrics
         )
 
     def train_valid_generator(self):
