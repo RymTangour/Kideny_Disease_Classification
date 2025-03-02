@@ -50,4 +50,4 @@ stages:
           cache: false
 
 
-#dvc init            dvc repro
+#dvc init            dvc repro      dvc dag
