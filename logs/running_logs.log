@@ -1076,3 +1076,483 @@ TypeError: DataIngestionConfig.__init__() got an unexpected keyword argument 'so
 [2025-03-02 23:37:20,916:INFO:_client:HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
 [2025-03-02 23:37:20,920:INFO:helpers:Initialized MLflow to track repo "RymTangour/Kideny_Disease_Classification"]
 [2025-03-02 23:37:20,923:INFO:helpers:Repository RymTangour/Kideny_Disease_Classification initialized!]
+[2025-03-03 00:37:36,582:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 00:37:36,584:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 00:37:40,151:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:37:40] "GET / HTTP/1.1" 200 -]
+[2025-03-03 00:38:00,453:ERROR:app:Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/pipeline/prediction.py", line 15, in predict
+    model =load_model(os.path.join("model","model.keras"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/keras/src/saving/saving_api.py", line 200, in load_model
+    raise ValueError(
+ValueError: File not found: filepath=model/model.keras. Please ensure the file is an accessible `.keras` zip file.
+[2025-03-03 00:38:00,575:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:38:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-03-03 00:45:15,171:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:45:15] "GET / HTTP/1.1" 200 -]
+[2025-03-03 00:45:19,245:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:45:19] "GET / HTTP/1.1" 200 -]
+[2025-03-03 00:49:19,916:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 00:49:19,917:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 00:49:24,655:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:49:24] "GET / HTTP/1.1" 200 -]
+[2025-03-03 00:49:24,729:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:49:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-03-03 00:54:28,149:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 00:54:28,151:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 00:54:34,874:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:54:34] "GET / HTTP/1.1" 200 -]
+[2025-03-03 00:54:46,379:ERROR:app:Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/pipeline/prediction.py", line 15, in predict
+    model =load_model(os.path.join("model","model.keras"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/keras/src/saving/saving_api.py", line 200, in load_model
+    raise ValueError(
+ValueError: File not found: filepath=model/model.keras. Please ensure the file is an accessible `.keras` zip file.
+[2025-03-03 00:54:46,475:INFO:_internal:127.0.0.1 - - [03/Mar/2025 00:54:46] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-03-03 01:02:38,355:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 01:02:38,356:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 01:02:47,121:INFO:_internal:127.0.0.1 - - [03/Mar/2025 01:02:47] "GET / HTTP/1.1" 200 -]
+[2025-03-03 01:03:26,088:ERROR:app:Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/pipeline/prediction.py", line 21, in predict
+    result=np.argmax(model.predict(test_image), axis=1)#When you call model.predict(test_image), the model outputs a probability distribution over the classes.[[0.2, 0.8]]The np.argmax function is used to find the index of the maximum value in the output array.
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/keras/src/layers/input_spec.py", line 245, in assert_input_compatibility
+    raise ValueError(
+ValueError: Input 0 of layer "functional" is incompatible with the layer: expected shape=(None, 224, 224, 3), found shape=(1, 244, 244, 3)
+[2025-03-03 01:03:26,398:INFO:_internal:127.0.0.1 - - [03/Mar/2025 01:03:26] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-03-03 01:08:43,668:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 01:08:43,668:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 01:08:47,931:INFO:_internal:127.0.0.1 - - [03/Mar/2025 01:08:47] "GET / HTTP/1.1" 200 -]
+[2025-03-03 01:09:10,820:INFO:_internal:127.0.0.1 - - [03/Mar/2025 01:09:10] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 03:55:29,166:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 03:55:29,169:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 03:55:33,464:INFO:_internal:127.0.0.1 - - [03/Mar/2025 03:55:33] "GET / HTTP/1.1" 200 -]
+[2025-03-03 03:55:33,568:INFO:_internal:127.0.0.1 - - [03/Mar/2025 03:55:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-03-03 04:02:31,008:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 04:02:31,010:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 04:02:35,158:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:02:35] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:02:56,171:ERROR:app:Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/pipeline/prediction.py", line 18, in predict
+    test_image=image.load_img(imagename, target_size=(224,224))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/keras/src/utils/image_utils.py", line 236, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/PIL/Image.py", line 3532, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7f558836d4e0>
+[2025-03-03 04:02:56,409:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:02:56] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-03-03 04:03:52,718:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:03:52] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:03:55,237:ERROR:app:Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/pipeline/prediction.py", line 18, in predict
+    test_image=image.load_img(imagename, target_size=(224,224))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/keras/src/utils/image_utils.py", line 236, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/PIL/Image.py", line 3532, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7f558836e8e0>
+[2025-03-03 04:03:55,253:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:03:55] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-03-03 04:03:56,419:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:03:56] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:04:18,882:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:04:18] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 04:12:38,073:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 04:12:38,074:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 04:12:43,088:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:12:43] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:13:14,528:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:13:14] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 04:13:33,289:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:13:33] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 04:13:41,056:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:13:41] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 04:13:46,905:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:13:46] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 04:13:55,380:WARNING:polymorphic_function:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7f04bffb6980> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-03-03 04:13:55,506:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:13:55] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 04:14:04,739:WARNING:polymorphic_function:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7f04ceb2b380> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-03-03 04:14:04,866:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:14:04] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 04:23:55,394:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 04:23:55,404:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 04:24:24,353:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:24] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:24:30,386:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:30] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:31,957:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:31] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:33,533:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:33] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:33,780:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:33] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:35,242:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:35] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:35,921:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:35] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:36,338:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:36] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:37,665:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:37] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:37,910:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:37] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:38,094:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:38] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:38,372:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:38] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:24:38,529:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:24:38] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:26:37,144:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:26:37] "[31m[1mPOST /predict HTTP/1.1[0m" 415 -]
+[2025-03-03 04:31:23,259:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 04:31:23,260:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 04:32:52,040:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:32:52] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:33:23,952:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:33:23] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:36:01,690:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:36:01] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:42:11,115:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:42:11] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:50:22,560:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:50:22] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:54:06,694:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 04:54:06,694:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 04:58:20,876:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:58:20] "GET / HTTP/1.1" 200 -]
+[2025-03-03 04:59:11,759:INFO:_internal:127.0.0.1 - - [03/Mar/2025 04:59:11] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:03:24,483:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:03:24] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:03:29,050:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:03:29] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:03:38,322:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:03:38] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:03:47,244:WARNING:polymorphic_function:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7fd697fa0b80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-03-03 05:03:47,374:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:03:47] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:04:00,934:WARNING:polymorphic_function:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7fd6a6617740> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-03-03 05:04:01,066:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:04:01] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:04:13,042:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:04:13] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:04:23,728:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:04:23] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:04:36,103:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:04:36] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:04:47,940:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:04:47] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 05:06:24,708:INFO:_internal:127.0.0.1 - - [03/Mar/2025 05:06:24] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 11:56:47,316:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 11:56:47,318:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 11:57:44,018:INFO:_internal:127.0.0.1 - - [03/Mar/2025 11:57:44] "GET / HTTP/1.1" 200 -]
+[2025-03-03 11:59:41,899:INFO:_internal:127.0.0.1 - - [03/Mar/2025 11:59:41] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 12:14:57,411:INFO:main: stage Data Ingestion stage  started]
+[2025-03-03 12:14:57,464:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:14:57,477:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:14:57,522:INFO:common:created directory at: artifacts]
+[2025-03-03 12:14:57,577:INFO:common:created directory at: artifacts/data_ingestion]
+[2025-03-03 12:14:57,625:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1g0FAt3OgF4BOqwvxBEMCHJ04FaypAALz/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 12:15:08,673:INFO:data_ingestion:Download data from https://drive.google.com/file/d/1g0FAt3OgF4BOqwvxBEMCHJ04FaypAALz/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 12:15:23,377:INFO:main:Stage Data Ingestion stage completed]
+[2025-03-03 12:15:23,378:INFO:main: stage Prepare base model  started]
+[2025-03-03 12:15:23,392:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:15:23,446:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:15:23,475:INFO:common:created directory at: artifacts]
+[2025-03-03 12:15:23,499:INFO:common:created directory at: artifacts/prepare_base_model]
+[2025-03-03 12:15:34,605:INFO:main:Stage Prepare base model completed]
+[2025-03-03 12:15:34,605:INFO:main: stage Training  started]
+[2025-03-03 12:15:34,608:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:15:34,610:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:15:34,611:INFO:common:created directory at: artifacts]
+[2025-03-03 12:15:34,625:INFO:common:created directory at: artifacts/training]
+[2025-03-03 12:16:12,035:INFO:main:Stage Training completed]
+[2025-03-03 12:16:12,037:INFO:main: stage Evaluation stage  started]
+[2025-03-03 12:16:12,051:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:16:12,064:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:16:12,067:INFO:common:created directory at: artifacts]
+[2025-03-03 12:16:16,124:INFO:common:json file saved at:scores.json]
+[2025-03-03 12:16:16,161:INFO:common:json file saved at:scores.json]
+[2025-03-03 12:16:16,162:INFO:main:Stage Evaluation stage completed]
+[2025-03-03 12:34:50,643:INFO:main: stage Data Ingestion stage  started]
+[2025-03-03 12:34:50,646:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:34:50,649:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:34:50,657:INFO:common:created directory at: artifacts]
+[2025-03-03 12:34:50,661:INFO:common:created directory at: artifacts/data_ingestion]
+[2025-03-03 12:34:50,663:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 12:34:51,567:ERROR:main:Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT
+
+but Gdown can't. Please check connections and permissions.]
+Traceback (most recent call last):
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/gdown/download.py", line 267, in download
+    url = get_url_from_gdrive_confirmation(res.text)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/gdown/download.py", line 55, in get_url_from_gdrive_confirmation
+    raise FileURLRetrievalError(
+gdown.exceptions.FileURLRetrievalError: Cannot retrieve the public link of the file. You may need to change the permission to 'Anyone with the link', or have had many accesses. Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/projet/Kideny_Disease_Classification/main.py", line 13, in <module>
+    obj.main()
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/pipeline/stage_01_data_Ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/components/data_ingestion.py", line 27, in download_file
+    raise e
+  File "/mnt/c/projet/Kideny_Disease_Classification/src/cnnClassifier/components/data_ingestion.py", line 22, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "/mnt/c/projet/Kideny_Disease_Classification/myenv/lib/python3.12/site-packages/gdown/download.py", line 278, in download
+    raise FileURLRetrievalError(message)
+gdown.exceptions.FileURLRetrievalError: Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT
+
+but Gdown can't. Please check connections and permissions.
+[2025-03-03 12:36:21,744:INFO:main: stage Data Ingestion stage  started]
+[2025-03-03 12:36:21,752:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:36:21,775:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:36:21,787:INFO:common:created directory at: artifacts]
+[2025-03-03 12:36:21,794:INFO:common:created directory at: artifacts/data_ingestion]
+[2025-03-03 12:36:21,802:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 12:38:28,469:INFO:data_ingestion:Download data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 12:41:33,598:INFO:main:Stage Data Ingestion stage completed]
+[2025-03-03 12:41:33,601:INFO:main: stage Prepare base model  started]
+[2025-03-03 12:41:33,625:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:41:33,647:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:41:33,652:INFO:common:created directory at: artifacts]
+[2025-03-03 12:41:33,659:INFO:common:created directory at: artifacts/prepare_base_model]
+[2025-03-03 12:41:44,508:INFO:main:Stage Prepare base model completed]
+[2025-03-03 12:41:44,508:INFO:main: stage Training  started]
+[2025-03-03 12:41:44,511:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:41:44,513:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:41:44,515:INFO:common:created directory at: artifacts]
+[2025-03-03 12:41:44,520:INFO:common:created directory at: artifacts/training]
+[2025-03-03 12:52:49,977:INFO:stage_01_data_Ingestion:stage Data Ingestion stage started*]
+[2025-03-03 12:52:49,979:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 12:52:49,981:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 12:52:49,982:INFO:common:created directory at: artifacts]
+[2025-03-03 12:52:49,984:INFO:common:created directory at: artifacts/data_ingestion]
+[2025-03-03 12:52:49,985:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 12:54:57,209:INFO:data_ingestion:Download data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 12:58:36,559:INFO:stage_01_data_Ingestion: stage Data Ingestion stage completed]
+[2025-03-03 13:04:15,585:INFO:stage_01_data_Ingestion:stage Data Ingestion stage started*]
+[2025-03-03 13:04:15,602:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 13:04:15,605:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 13:04:15,608:INFO:common:created directory at: artifacts]
+[2025-03-03 13:04:15,611:INFO:common:created directory at: artifacts/data_ingestion]
+[2025-03-03 13:04:15,612:INFO:data_ingestion:Downloading data from hhttps://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 13:06:21,924:INFO:data_ingestion:Download data from hhttps://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 13:09:30,956:INFO:stage_01_data_Ingestion: stage Data Ingestion stage completed]
+[2025-03-03 14:29:54,619:INFO:stage_01_data_Ingestion:stage Data Ingestion stage started*]
+[2025-03-03 14:29:54,623:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 14:29:54,625:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 14:29:54,626:INFO:common:created directory at: artifacts]
+[2025-03-03 14:29:54,637:INFO:common:created directory at: artifacts/data_ingestion]
+[2025-03-03 14:29:54,642:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 14:32:01,272:INFO:data_ingestion:Download data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 14:35:30,494:INFO:stage_01_data_Ingestion: stage Data Ingestion stage completed]
+[2025-03-03 14:48:26,773:INFO:stage_01_data_Ingestion:stage Data Ingestion stage started*]
+[2025-03-03 14:48:26,776:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 14:48:26,778:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 14:48:26,779:INFO:common:created directory at: artifacts]
+[2025-03-03 14:48:26,788:INFO:common:created directory at: artifacts/data_ingestion]
+[2025-03-03 14:48:26,790:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 14:50:37,438:INFO:data_ingestion:Download data from https://drive.google.com/file/d/1LaOaSmJyoYyh9I-sfFnTGSlQq7EsrEwT/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-03 14:53:46,341:INFO:stage_01_data_Ingestion: stage Data Ingestion stage completed]
+[2025-03-03 15:11:16,378:INFO:stage_02_prepare_base_model: stage Prepare base model  started]
+[2025-03-03 15:11:16,381:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 15:11:16,383:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 15:11:16,384:INFO:common:created directory at: artifacts]
+[2025-03-03 15:11:16,388:INFO:common:created directory at: artifacts/prepare_base_model]
+[2025-03-03 15:11:29,794:INFO:stage_02_prepare_base_model:Stage Prepare base model completed]
+[2025-03-03 15:20:56,223:INFO:stage_03_model_training: stage Training  started]
+[2025-03-03 15:20:56,226:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 15:20:56,228:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 15:20:56,229:INFO:common:created directory at: artifacts]
+[2025-03-03 15:20:56,231:INFO:common:created directory at: artifacts/training]
+[2025-03-03 15:30:24,170:INFO:stage_03_model_training: stage Training  started]
+[2025-03-03 15:30:24,173:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 15:30:24,175:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 15:30:24,176:INFO:common:created directory at: artifacts]
+[2025-03-03 15:30:24,179:INFO:common:created directory at: artifacts/training]
+[2025-03-03 15:36:11,549:INFO:stage_03_model_training: stage Training  started]
+[2025-03-03 15:36:11,552:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 15:36:11,556:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 15:36:11,558:INFO:common:created directory at: artifacts]
+[2025-03-03 15:36:11,569:INFO:common:created directory at: artifacts/training]
+[2025-03-03 15:39:19,264:INFO:stage_03_model_training:Stage Training completed]
+[2025-03-03 15:45:13,482:INFO:stage_04_model_evaluation: stage Evaluation stage  started]
+[2025-03-03 15:45:13,486:INFO:common:yaml file :config/config.yaml loaded succfully]
+[2025-03-03 15:45:13,490:INFO:common:yaml file :params.yaml loaded succfully]
+[2025-03-03 15:45:13,491:INFO:common:created directory at: artifacts]
+[2025-03-03 15:45:55,620:INFO:common:json file saved at:scores.json]
+[2025-03-03 15:45:55,650:INFO:common:json file saved at:scores.json]
+[2025-03-03 15:45:55,651:INFO:stage_04_model_evaluation:Stage Evaluation stage completed]
+[2025-03-03 15:53:09,339:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 15:53:09,340:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 15:53:13,957:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:53:13] "GET / HTTP/1.1" 200 -]
+[2025-03-03 15:53:42,389:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:53:42] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 15:55:34,307:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 15:55:34,308:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 15:55:38,238:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:55:38] "GET / HTTP/1.1" 200 -]
+[2025-03-03 15:55:38,330:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:55:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-03-03 15:56:04,180:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:56:04] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 15:56:29,268:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:56:29] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 15:56:32,373:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:56:32] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 15:56:41,492:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:56:41] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 15:56:56,414:WARNING:polymorphic_function:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7f040a1ec220> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-03-03 15:56:56,538:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:56:56] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 15:56:58,491:INFO:_internal:127.0.0.1 - - [03/Mar/2025 15:56:58] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:04:48,883:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:04:48] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:17:31,536:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 16:17:31,536:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 16:18:40,000:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:18:40] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:18:42,085:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:18:42] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:22:14,604:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 16:22:14,608:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 16:24:31,090:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:24:31] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:24:37,168:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:24:37] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:25:03,107:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:25:03] "POST /predict HTTP/1.1" 200 -]
+[2025-03-03 16:26:35,361:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.247.219:8080]
+[2025-03-03 16:26:35,361:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-03-03 16:27:22,460:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:27:22] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:27:26,749:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:27:26] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:34:32,901:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:34:32] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:34:33,707:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:34:33] "GET / HTTP/1.1" 200 -]
+[2025-03-03 16:35:18,304:INFO:_internal:127.0.0.1 - - [03/Mar/2025 16:35:18] "POST /predict HTTP/1.1" 200 -]

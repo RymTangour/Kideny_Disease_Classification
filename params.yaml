@@ -2,7 +2,7 @@ AUGMENTATION: True
 IMAGE_SIZE: [224, 224, 3] #VGG16 model recommandation
 BATCH_SIZE: 16
 INCLUDE_TOP: False
-EPOCHS: 10
+EPOCHS: 1
 CLASSES: 2
 WEIGHTS: imagenet
 LEARNING_RATE: 0.01
@@ -29,4 +29,4 @@ LEARNING_RATE: 0.01
 # This indicates that the model will use pre-trained weights from the ImageNet dataset. Using pre-trained weights allows the model to leverage learned features, which is especially useful when training on a small dataset.
 
 # LEARNING_RATE: 0.01s
-# The learning rate controls how much the model's weights are updated during training. A learning rate of 0.01 is specified here. The "s" at the end might be a typo or could indicate a scheduler for adjusting the learning rate during training.
+# The learning rate controls how much the model's weights are updated during training. A learning rate of 0.01 is specified here.

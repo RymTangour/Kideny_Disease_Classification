@@ -5,7 +5,7 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 6a75e77dc0c315ad16eea310125e03e0
+      md5: e2ace9b7036276f4b60cdc98ffdc4804
       size: 591
       isexec: true
     - path: src/cnnClassifier/pipeline/stage_01_data_Ingestion.py
@@ -14,17 +14,17 @@ stages:
       size: 872
       isexec: true
     outs:
-    - path: artifacts/data_ingestion/demo kideny datset
+    - path: artifacts/data_ingestion/demo kideny dataset
       hash: md5
-      md5: 2c93789ec806a0589279ec06950f3b7f.dir
-      size: 52039736
-      nfiles: 425
+      md5: 37515bb11b289cf75a2f07c53c8cceb9.dir
+      size: 961115981
+      nfiles: 7360
   prepare_base_model:
     cmd: python src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 6a75e77dc0c315ad16eea310125e03e0
+      md5: e2ace9b7036276f4b60cdc98ffdc4804
       size: 591
       isexec: true
     - path: src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
@@ -45,25 +45,25 @@ stages:
     outs:
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 2210e7743b08d39a4c7b556558557d79.dir
+      md5: 3e76ac149ab0ac2cadf0493c5ad3d454.dir
       size: 118073246
       nfiles: 2
   training:
     cmd: python src/cnnClassifier/pipeline/stage_03_model_training.py
     deps:
-    - path: artifacts/data_ingestion/demo kideny datset
+    - path: artifacts/data_ingestion/demo kideny dataset
       hash: md5
-      md5: 2c93789ec806a0589279ec06950f3b7f.dir
-      size: 52039736
-      nfiles: 425
+      md5: 37515bb11b289cf75a2f07c53c8cceb9.dir
+      size: 961115981
+      nfiles: 7360
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 2210e7743b08d39a4c7b556558557d79.dir
+      md5: 3e76ac149ab0ac2cadf0493c5ad3d454.dir
       size: 118073246
       nfiles: 2
     - path: config/config.yaml
       hash: md5
-      md5: 6a75e77dc0c315ad16eea310125e03e0
+      md5: e2ace9b7036276f4b60cdc98ffdc4804
       size: 591
       isexec: true
     - path: src/cnnClassifier/pipeline/stage_03_model_training.py
@@ -75,7 +75,7 @@ stages:
       params.yaml:
         AUGMENTATION: true
         BATCH_SIZE: 16
-        EPOCHS: 10
+        EPOCHS: 1
         IMAGE_SIZE:
         - 224
         - 224
@@ -83,20 +83,20 @@ stages:
     outs:
     - path: artifacts/training/model.keras
       hash: md5
-      md5: 95a0387e402bb678fbf9ed72ece08760
+      md5: d9502ab9c64c6ff4a030b68e9193246a
       size: 59543570
       isexec: true
   evaluation:
     cmd: python src/cnnClassifier/pipeline/stage_04_model_evaluation.py
     deps:
-    - path: artifacts/data_ingestion/demo kideny datset
+    - path: artifacts/data_ingestion/demo kideny dataset
       hash: md5
-      md5: 2c93789ec806a0589279ec06950f3b7f.dir
-      size: 52039736
-      nfiles: 425
+      md5: 37515bb11b289cf75a2f07c53c8cceb9.dir
+      size: 961115981
+      nfiles: 7360
     - path: artifacts/training/model.keras
       hash: md5
-      md5: 95a0387e402bb678fbf9ed72ece08760
+      md5: d9502ab9c64c6ff4a030b68e9193246a
       size: 59543570
       isexec: true
     - path: src/cnnClassifier/pipeline/stage_04_model_evaluation.py
@@ -114,6 +114,6 @@ stages:
     outs:
     - path: scores.json
       hash: md5
-      md5: aec02d5ae9bb84d18a1c366ae793beef
-      size: 58
+      md5: 199fa1434803560b7fd7d5a083ed60ba
+      size: 69
       isexec: true

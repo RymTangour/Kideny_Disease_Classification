@@ -61,7 +61,7 @@ class ConfigurationManager:
         training = self.config.training
         prepare_base_model = self.config.prepare_base_model
         params = self.params
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "demo kideny datset")
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "demo kideny dataset")
         create_directories([
             Path(training.root_dir)
         ])
@@ -83,7 +83,7 @@ class ConfigurationManager:
     def get_evaluation_config(self)-> EvaluationConfig:
             eval_config= EvaluationConfig(
                 path_of_model="artifacts/training/model.keras",
-                training_data="artifacts/data_ingestion/demo kideny datset",
+                training_data="artifacts/data_ingestion/demo kideny dataset",
                 mlflow_uri="https://dagshub.com/RymTangour/Kideny_Disease_Classification.mlflow",
                 all_params=self.params,
                 params_image_size=self.params.IMAGE_SIZE,

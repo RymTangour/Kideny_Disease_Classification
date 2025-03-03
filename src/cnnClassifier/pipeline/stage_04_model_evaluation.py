@@ -14,8 +14,8 @@ class EvaluationPipeline:
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
         evaluation.save_score()
-        evaluation.log_into_mlflow()
-        evaluation.assign_alias_to_stage("VGG16Model", "Staging", "champion")
+        #evaluation.log_into_mlflow()
+        #evaluation.assign_alias_to_stage("VGG16Model", "Staging", "champion")
 
 
 STAGE_NAME="Evaluation stage"
